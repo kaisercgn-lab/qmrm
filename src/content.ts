@@ -26,9 +26,9 @@ export const stockImages = {
 const shared = {
   company: {
     name: 'QMRM GmbH',
-    addressLines: ['Musterstraße 12', '68161 Mannheim', 'Deutschland'],
-    phone: '+49 621 123 45 67',
-    email: 'kontakt@kaiser-mrt-zertifizierung.de',
+    addressLines: ['Königstuhlstrasse 14', '68163 Mannheim', 'Deutschland'],
+    phone: '+49 621 XXXXXXXXX',
+    email: 'info@qmrm.de',
   },
   professor: {
     name: 'Prof. Dr. med. Clemens Kaiser',
