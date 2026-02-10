@@ -26,8 +26,8 @@ export const stockImages = {
 const shared = {
   company: {
     name: 'QMRM GmbH',
-    addressLines: ['Musterstraße 12', '68161 Mannheim', 'Deutschland'],
-    phone: '+49 621 123 45 67',
+    addressLines: ['Königstuhlstraße 14', '68163 Mannheim'],
+    phone: 'XXXX/XXXXXXXX',
     email: 'kontakt@kaiser-mrt-zertifizierung.de',
   },
   professor: {
