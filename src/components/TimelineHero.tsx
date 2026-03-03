@@ -47,27 +47,33 @@ export const TimelineHero = ({
     if (!track) return
 
     let direction = 1
-    const tick = () => {
-      const maxScroll = track.scrollWidth - track.clientWidth
-      if (maxScroll > 0 && !isDragging) {
-        const current = track.scrollLeft
-        const next = current + direction * 0.35
-        if (next <= 0) {
-          track.scrollTo({ left: 0 })
-          direction = 1
-          return
+    let animationFrameId: number
+    let lastTime: number | undefined
+
+    const tick = (time: number) => {
+      if (lastTime !== undefined) {
+        const delta = time - lastTime
+        const maxScroll = track.scrollWidth - track.clientWidth
+        if (maxScroll > 0 && !isDragging) {
+          const current = track.scrollLeft
+          const next = current + direction * delta * (0.35 / 20)
+          if (next <= 0) {
+            track.scrollTo({ left: 0 })
+            direction = 1
+          } else if (next >= maxScroll) {
+            track.scrollTo({ left: maxScroll })
+            direction = -1
+          } else {
+            track.scrollTo({ left: next })
+          }
         }
-        if (next >= maxScroll) {
-          track.scrollTo({ left: maxScroll })
-          direction = -1
-          return
-        }
-        track.scrollTo({ left: next })
       }
+      lastTime = time
+      animationFrameId = window.requestAnimationFrame(tick)
     }
 
-    const interval = window.setInterval(tick, 20)
-    return () => window.clearInterval(interval)
+    animationFrameId = window.requestAnimationFrame(tick)
+    return () => window.cancelAnimationFrame(animationFrameId)
   }, [isDragging, events.length])
 
   useEffect(() => {
