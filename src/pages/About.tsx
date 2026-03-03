@@ -36,7 +36,7 @@ export const About = () => {
                 </span>
                 <span>
                   <strong>{t.about.profile.linkedinLabel}:</strong>{' '}
-                  <a href={professor.linkedinUrl} target="_blank" rel="noreferrer">
+                  <a href={professor.linkedinUrl} target="_blank" rel="noopener noreferrer">
                     {professor.linkedinUrl}
                   </a>
                 </span>
@@ -140,7 +140,7 @@ export const About = () => {
                   className="partner-link"
                   href={partner.linkUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {partner.linkLabel}
                 </a>
