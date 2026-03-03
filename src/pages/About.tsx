@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <div className="page">
       <TimelineHero
-        backgroundImage={`${import.meta.env.BASE_URL}clemens-hero.png`}
+        backgroundImage={`${import.meta.env.BASE_URL}clemens-portrait.jpg`}
         person={timeline.person}
         events={timeline.events}
         ariaLabel={locale === 'de' ? 'Vita Zeitachse' : 'Career timeline'}
