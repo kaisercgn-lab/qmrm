@@ -34,7 +34,7 @@ export const SiteFooter = ({
         <div>
           <h4>{companyName}</h4>
           <p>{addressLines.join(', ')}</p>
-          <p>{phone}</p>
+          {phone && <p>{phone}</p>}
           <p>
             <a href={`mailto:${email}`}>{email}</a>
           </p>
