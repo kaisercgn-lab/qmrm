@@ -1,56 +1,17 @@
 import { Link } from 'react-router-dom'
+import { BrandHero } from '../components/BrandHero'
 import { CardGrid } from '../components/CardGrid'
 import { Section } from '../components/Section'
-import { content, logoUrl, sharedContent } from '../content'
+import { content } from '../content'
 import { useLocale } from '../i18n'
 
 export const Home = () => {
   const { locale } = useLocale()
   const t = content[locale]
-  const professor = sharedContent.professor
 
   return (
     <div className="page">
-      <section className="brand-hero">
-        <div className="brand-hero-content">
-          <img className="brand-logo" src={logoUrl} alt="QMRM GmbH" />
-          <span className="brand-eyebrow">{t.home.hero.eyebrow}</span>
-          <h1>{t.home.hero.title}</h1>
-          <p className="brand-lead">{t.home.hero.subtitle}</p>
-          <div className="hero-actions">
-            <Link className="primary-button" to="/certification">
-              {t.home.hero.primaryCta}
-            </Link>
-            <Link className="ghost-button" to="/consultation">
-              {t.home.hero.secondaryCta}
-            </Link>
-          </div>
-          <div className="brand-badges">
-            {t.home.hero.badges.map((badge) => (
-              <span key={badge}>{badge}</span>
-            ))}
-          </div>
-        </div>
-        <div className="brand-portrait">
-          <img
-            src={professor.imageUrl}
-            alt={`Portrait of ${professor.name}`}
-          />
-          <div className="brand-portrait-body">
-            <span className="brand-portrait-label">
-              {t.home.hero.portraitLabel}
-            </span>
-            <h3>{professor.name}</h3>
-            <p className="brand-portrait-role">
-              {locale === 'de' ? professor.titleDe : professor.titleEn}
-            </p>
-            <p>{professor.affiliation}</p>
-            <p className="brand-portrait-quote">
-              “{locale === 'de' ? professor.quoteDe : professor.quoteEn}”
-            </p>
-          </div>
-        </div>
-      </section>
+      <BrandHero />
 
       <Section title={t.home.highlights.title} subtitle={t.home.highlights.subtitle}>
         <CardGrid items={t.home.highlights.items} />
