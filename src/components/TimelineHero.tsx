@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import './timeline-hero.css'
 
 export type TimelinePerson = {
@@ -37,10 +37,10 @@ export const TimelineHero = ({
   const [isDragging, setIsDragging] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
-  const positionedEvents = events.map((event, index) => ({
+  const positionedEvents = useMemo(() => events.map((event, index) => ({
     ...event,
     side: event.side ?? (index % 2 === 0 ? 'top' : 'bottom'),
-  }))
+  })), [events])
 
   useEffect(() => {
     const track = trackRef.current
