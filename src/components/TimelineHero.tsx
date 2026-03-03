@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import './timeline-hero.css'
 
 export type TimelinePerson = {
@@ -37,37 +37,43 @@ export const TimelineHero = ({
   const [isDragging, setIsDragging] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
-  const positionedEvents = events.map((event, index) => ({
+  const positionedEvents = useMemo(() => events.map((event, index) => ({
     ...event,
     side: event.side ?? (index % 2 === 0 ? 'top' : 'bottom'),
-  }))
+  })), [events])
 
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
 
     let direction = 1
-    const tick = () => {
-      const maxScroll = track.scrollWidth - track.clientWidth
-      if (maxScroll > 0 && !isDragging) {
-        const current = track.scrollLeft
-        const next = current + direction * 0.35
-        if (next <= 0) {
-          track.scrollTo({ left: 0 })
-          direction = 1
-          return
+    let animationFrameId: number
+    let lastTime: number | undefined
+
+    const tick = (time: number) => {
+      if (lastTime !== undefined) {
+        const delta = time - lastTime
+        const maxScroll = track.scrollWidth - track.clientWidth
+        if (maxScroll > 0 && !isDragging) {
+          const current = track.scrollLeft
+          const next = current + direction * delta * (0.35 / 20)
+          if (next <= 0) {
+            track.scrollTo({ left: 0 })
+            direction = 1
+          } else if (next >= maxScroll) {
+            track.scrollTo({ left: maxScroll })
+            direction = -1
+          } else {
+            track.scrollTo({ left: next })
+          }
         }
-        if (next >= maxScroll) {
-          track.scrollTo({ left: maxScroll })
-          direction = -1
-          return
-        }
-        track.scrollTo({ left: next })
       }
+      lastTime = time
+      animationFrameId = window.requestAnimationFrame(tick)
     }
 
-    const interval = window.setInterval(tick, 20)
-    return () => window.clearInterval(interval)
+    animationFrameId = window.requestAnimationFrame(tick)
+    return () => window.cancelAnimationFrame(animationFrameId)
   }, [isDragging, events.length])
 
   useEffect(() => {
@@ -82,6 +88,42 @@ export const TimelineHero = ({
     hero.addEventListener('toggle', handleToggle, true)
     return () => hero.removeEventListener('toggle', handleToggle, true)
   }, [])
+
+  const handlePointerDown = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track || event.button !== 0) return
+    event.preventDefault()
+    setIsDragging(true)
+    dragState.current = {
+      startX: event.clientX,
+      startScroll: track.scrollLeft,
+    }
+    track.setPointerCapture(event.pointerId)
+  }
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track || !isDragging) return
+    const delta = event.clientX - dragState.current.startX
+    track.scrollLeft = dragState.current.startScroll - delta
+  }
+
+  const handlePointerUp = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track) return
+    setIsDragging(false)
+    track.releasePointerCapture(event.pointerId)
+  }
+
+  const handlePointerCancel = () => setIsDragging(false)
+
+  const handlePointerLeave = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (track) {
+      track.releasePointerCapture(event.pointerId)
+    }
+    setIsDragging(false)
+  }
 
   return (
     <section
@@ -102,37 +144,11 @@ export const TimelineHero = ({
             className={`timeline-track${isDragging ? ' dragging' : ''}`}
             role="list"
             ref={trackRef}
-            onPointerDown={(event) => {
-              const track = trackRef.current
-              if (!track || event.button !== 0) return
-              event.preventDefault()
-              setIsDragging(true)
-              dragState.current = {
-                startX: event.clientX,
-                startScroll: track.scrollLeft,
-              }
-              track.setPointerCapture(event.pointerId)
-            }}
-            onPointerMove={(event) => {
-              const track = trackRef.current
-              if (!track || !isDragging) return
-              const delta = event.clientX - dragState.current.startX
-              track.scrollLeft = dragState.current.startScroll - delta
-            }}
-            onPointerUp={(event) => {
-              const track = trackRef.current
-              if (!track) return
-              setIsDragging(false)
-              track.releasePointerCapture(event.pointerId)
-            }}
-            onPointerCancel={() => setIsDragging(false)}
-            onPointerLeave={(event) => {
-              const track = trackRef.current
-              if (track) {
-                track.releasePointerCapture(event.pointerId)
-              }
-              setIsDragging(false)
-            }}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerCancel}
+            onPointerLeave={handlePointerLeave}
           >
             {positionedEvents.map((event) => (
               <li

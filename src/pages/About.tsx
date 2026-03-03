@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <div className="page">
       <TimelineHero
-        backgroundImage={`${import.meta.env.BASE_URL}clemens-hero.png`}
+        backgroundImage={`${import.meta.env.BASE_URL}clemens-portrait.jpg`}
         person={timeline.person}
         events={timeline.events}
         ariaLabel={locale === 'de' ? 'Vita Zeitachse' : 'Career timeline'}
@@ -36,7 +36,7 @@ export const About = () => {
                 </span>
                 <span>
                   <strong>{t.about.profile.linkedinLabel}:</strong>{' '}
-                  <a href={professor.linkedinUrl} target="_blank" rel="noreferrer">
+                  <a href={professor.linkedinUrl} target="_blank" rel="noopener noreferrer">
                     {professor.linkedinUrl}
                   </a>
                 </span>
@@ -140,7 +140,7 @@ export const About = () => {
                   className="partner-link"
                   href={partner.linkUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {partner.linkLabel}
                 </a>
