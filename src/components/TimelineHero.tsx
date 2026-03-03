@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import './timeline-hero.css'
 
-export type TimelinePerson = {
+type TimelinePerson = {
   name: string
   yearsOrTagline: string
   subtitleLine: string
   subtitleLine2: string
 }
 
-export type TimelineEvent = {
+type TimelineEvent = {
   year: string
   title: string
   text: string
