@@ -83,6 +83,42 @@ export const TimelineHero = ({
     return () => hero.removeEventListener('toggle', handleToggle, true)
   }, [])
 
+  const handlePointerDown = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track || event.button !== 0) return
+    event.preventDefault()
+    setIsDragging(true)
+    dragState.current = {
+      startX: event.clientX,
+      startScroll: track.scrollLeft,
+    }
+    track.setPointerCapture(event.pointerId)
+  }
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track || !isDragging) return
+    const delta = event.clientX - dragState.current.startX
+    track.scrollLeft = dragState.current.startScroll - delta
+  }
+
+  const handlePointerUp = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (!track) return
+    setIsDragging(false)
+    track.releasePointerCapture(event.pointerId)
+  }
+
+  const handlePointerCancel = () => setIsDragging(false)
+
+  const handlePointerLeave = (event: React.PointerEvent<HTMLOListElement>) => {
+    const track = trackRef.current
+    if (track) {
+      track.releasePointerCapture(event.pointerId)
+    }
+    setIsDragging(false)
+  }
+
   return (
     <section
       ref={heroRef}
@@ -102,37 +138,11 @@ export const TimelineHero = ({
             className={`timeline-track${isDragging ? ' dragging' : ''}`}
             role="list"
             ref={trackRef}
-            onPointerDown={(event) => {
-              const track = trackRef.current
-              if (!track || event.button !== 0) return
-              event.preventDefault()
-              setIsDragging(true)
-              dragState.current = {
-                startX: event.clientX,
-                startScroll: track.scrollLeft,
-              }
-              track.setPointerCapture(event.pointerId)
-            }}
-            onPointerMove={(event) => {
-              const track = trackRef.current
-              if (!track || !isDragging) return
-              const delta = event.clientX - dragState.current.startX
-              track.scrollLeft = dragState.current.startScroll - delta
-            }}
-            onPointerUp={(event) => {
-              const track = trackRef.current
-              if (!track) return
-              setIsDragging(false)
-              track.releasePointerCapture(event.pointerId)
-            }}
-            onPointerCancel={() => setIsDragging(false)}
-            onPointerLeave={(event) => {
-              const track = trackRef.current
-              if (track) {
-                track.releasePointerCapture(event.pointerId)
-              }
-              setIsDragging(false)
-            }}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerCancel}
+            onPointerLeave={handlePointerLeave}
           >
             {positionedEvents.map((event) => (
               <li
