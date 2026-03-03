@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { SiteHeader } from './components/SiteHeader'
 import { SiteFooter } from './components/SiteFooter'
 import { LocaleProvider, useLocale } from './i18n'
@@ -24,15 +24,20 @@ const ScrollToTop = () => {
 const AppShell = () => {
   const { locale } = useLocale()
   const t = content[locale]
-  const mainNavItems = [
+
+  const mainNavItems = useMemo(() => [
     { path: '/', label: t.nav.home },
     { path: '/consultation', label: t.nav.consultation },
     { path: '/certification', label: t.nav.certification },
     { path: '/education', label: t.nav.education },
     { path: '/about', label: t.nav.about },
     { path: '/contact', label: t.nav.contact },
-  ]
-  const footerNavItems = [...mainNavItems, { path: '/impressum', label: t.nav.impressum }]
+  ], [t])
+
+  const footerNavItems = useMemo(() => [
+    ...mainNavItems,
+    { path: '/impressum', label: t.nav.impressum }
+  ], [mainNavItems, t])
 
   return (
     <div className="app">
