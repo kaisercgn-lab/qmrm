@@ -27,7 +27,7 @@ const shared = {
   company: {
     name: 'QMRM GmbH',
     addressLines: ['Königstuhlstrasse 14', '68163 Mannheim', 'Deutschland'],
-    phone: '+49 621 XXXXXXXXX',
+    phone: '',
     email: 'info@qmrm.de',
   },
   professor: {

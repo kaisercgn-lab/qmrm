@@ -23,7 +23,7 @@ export const Contact = () => {
           <div className="contact-info">
             <h3>{company.name}</h3>
             <p>{company.addressLines.join(', ')}</p>
-            <p>{company.phone}</p>
+            {company.phone && <p>{company.phone}</p>}
             <p>
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
