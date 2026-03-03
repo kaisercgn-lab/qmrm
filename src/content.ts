@@ -245,16 +245,14 @@ export const content = {
         person: {
           name: 'Prof. Dr. med. Clemens Kaiser',
           yearsOrTagline: 'Sektionsleiter Mammadiagnostik UMM',
-          subtitleLine: 'Oberarzt, Klinik fuer Radiologie und Nuklearmedizin',
-          subtitleLine2: 'Universitaetsmedizin Mannheim',
+          subtitleLine: 'Oberarzt, Klinik für Radiologie und Nuklearmedizin',
+          subtitleLine2: 'Universitätsmedizin Mannheim',
         },
-        // Timeline events: edit or replace these items as needed.
         events: [
           {
             year: '2010',
             title: 'Dissertation',
-            text:
-              'Duct-Obstruction-Sign: DCIS vs. Papillom in der MR-Mammographie (FSU Jena).',
+            text: 'Duct-Obstruction-Sign: DCIS vs. Papillom in der MR-Mammographie (FSU Jena).',
           },
           {
             year: '2011',
@@ -264,74 +262,32 @@ export const content = {
           {
             year: '2013',
             title: 'Research Rotation',
-            text: 'Radiologie, Universitaetsklinikum Jena.',
-          },
-          {
-            year: '2014',
-            title: 'Mamma-MRT Standards',
-            text:
-              'Schwerpunkt auf standardisierter Befundung und Protokollqualitaet.',
-          },
-          {
-            year: '2015',
-            title: 'Qualitaet & Befundung',
-            text:
-              'Fokus auf diagnostische Zeichen und strukturierte Befundung.',
+            text: 'Radiologische Abteilung, Universitätsklinikum Jena.',
           },
           {
             year: '2016',
-            title: 'Erste Publikation',
-            text: 'Erste wissenschaftliche Publikation zur MR-Mammographie angenommen.',
-          },
-          {
-            year: '2016',
-            title: 'Gutachtertaetigkeit',
-            text: 'Beginn als Reviewer fuer Fachzeitschriften.',
-          },
-          {
-            year: '2016',
-            title: 'Hochschuldidaktik',
-            text: 'Baden-Wuerttemberg Zertifikat (MQ 1 & 2).',
+            title: 'Qualifikation & Mitgliedschaft',
+            text: 'Baden-Württemberg Zertifikat (Hochschuldidaktik) und Aufnahme in die Degum.',
           },
           {
             year: '2017',
             title: 'Research Rotation',
-            text: 'DKFZ Heidelberg, Abteilung Radiologie.',
+            text: 'Abteilung für Radiologie, Deutsches Krebsforschungszentrum (DKFZ), Heidelberg.',
           },
           {
             year: '2019',
-            title: 'Habilitation',
-            text:
-              'Optimierung der MR-Mammographie auf dem Weg zur Screening-Methode.',
-          },
-          {
-            year: '2019',
-            title: 'Studienleitung',
-            text: 'Principal investigator: USCT und MA-DETECT.',
+            title: 'Habilitation & Studienleitung',
+            text: 'Venia legendi (Fokus: MR-Mammographie Screening) sowie Principal investigator (USCT, MA-DETECT).',
           },
           {
             year: '2020',
-            title: 'Mamma-MRT Oekonomie',
-            text:
-              'Kosten-Nutzen-Analysen der MR-Mammographie (u.a. TK-Study).',
-          },
-          {
-            year: '2021',
-            title: 'Screening & Dichte Brueste',
-            text:
-              'Evidenz zu Abbreviated MRI und Screening bei dichtem Gewebe.',
-          },
-          {
-            year: '2021',
-            title: 'Technik & Sequenzen',
-            text:
-              'Arbeiten zu beschleunigten Sequenzen und Bildqualitaet in der Mamma-MRT.',
+            title: 'Gesundheitsökonomie',
+            text: 'Fokus auf Kosten-Effektivität und Abbreviated Breast MRI.',
           },
           {
             year: 'Heute',
-            title: 'Leitung & Expertise',
-            text:
-              'Sektionsleiter Mammadiagnostik, >10.000 Mamma-MRT Befundungen.',
+            title: 'Medizinische Leitung',
+            text: 'Sektionsleiter Mammadiagnostik und Oberarzt, Universitätsmedizin Mannheim.',
           },
         ],
       },
