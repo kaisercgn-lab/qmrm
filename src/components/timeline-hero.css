@@ -1,36 +1,48 @@
 .timeline-hero {
   position: relative;
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
+  background-color: #060a0e;
   color: #ffffff;
   min-height: 640px;
   display: flex;
   align-items: stretch;
-  transition: background-size 0.6s ease;
 }
 
-.timeline-hero.expanded {
-  background-size: 112%;
+.timeline-hero-image {
+  position: absolute;
+  top: 0;
+  right: 5vw; /* Position the image on the right */
+  bottom: 0;
+  width: 40vw; /* Limit the width of the image */
+  max-width: 500px;
+  background-size: contain; /* Scale down so face is fully visible */
+  background-position: center bottom; /* Align to the bottom right area */
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: transform 0.6s ease;
 }
 
+.timeline-hero.expanded .timeline-hero-image {
+  transform: scale(1.05); /* Slight scale when expanded */
+}
+
+/* Optional: Keep a fade on the left edge of the image container to blend it into the background if needed, but not across the whole section */
 .timeline-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(6, 10, 14, 0.78) 0%,
-    rgba(6, 10, 14, 0.62) 58%,
-    rgba(6, 10, 14, 0.18) 78%,
+    rgba(6, 10, 14, 0.95) 0%,
+    rgba(6, 10, 14, 0.8) 45%,
+    rgba(6, 10, 14, 0.2) 65%,
     rgba(6, 10, 14, 0) 100%
   );
-  z-index: 0;
+  z-index: 1; /* Place above the image but below the text */
 }
 
 .timeline-hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Move up above the new ::before gradient */
   width: min(1180px, 68vw);
   margin-left: 7vw;
   margin-right: auto;

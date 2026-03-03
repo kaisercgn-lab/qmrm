@@ -87,8 +87,11 @@ export const TimelineHero = ({
     <section
       ref={heroRef}
       className={`timeline-hero${isExpanded ? ' expanded' : ''}`}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
+      <div
+        className="timeline-hero-image"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
       <div className="timeline-hero-inner">
         <div className="timeline-hero-copy">
           <p className="timeline-hero-kicker">{person.yearsOrTagline}</p>
