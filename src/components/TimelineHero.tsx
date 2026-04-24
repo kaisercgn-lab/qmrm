@@ -129,51 +129,56 @@ export const TimelineHero = ({
     <section
       ref={heroRef}
       className={`timeline-hero${isExpanded ? ' expanded' : ''}`}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="timeline-hero-inner">
-        <div className="timeline-hero-copy">
-          <p className="timeline-hero-kicker">{person.yearsOrTagline}</p>
-          <h1 className="timeline-hero-name">{person.name}</h1>
-          <p className="timeline-hero-sub">{person.subtitleLine}</p>
-          <p className="timeline-hero-sub">{person.subtitleLine2}</p>
+        <div className="timeline-hero-main">
+          <div className="timeline-hero-copy">
+            <p className="timeline-hero-kicker">{person.yearsOrTagline}</p>
+            <h1 className="timeline-hero-name">{person.name}</h1>
+            <p className="timeline-hero-sub">{person.subtitleLine}</p>
+            <p className="timeline-hero-sub">{person.subtitleLine2}</p>
+          </div>
+
+          <div className="timeline-hero-timeline" aria-label={ariaLabel}>
+            <ol
+              className={`timeline-track${isDragging ? ' dragging' : ''}`}
+              role="list"
+              ref={trackRef}
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              onPointerCancel={handlePointerCancel}
+              onPointerLeave={handlePointerLeave}
+            >
+              {positionedEvents.map((event) => (
+                <li
+                  key={`${event.year}-${event.title}`}
+                  className={`timeline-event ${event.side}`}
+                >
+                  <div className="timeline-event-card">
+                    <span className="timeline-event-year">{event.year}</span>
+                    <h3 className="timeline-event-title">{event.title}</h3>
+                    <p className="timeline-event-text">{event.text}</p>
+                    {event.thumb ? (
+                      <img
+                        className="timeline-event-thumb"
+                        src={event.thumb}
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {details ? <div className="timeline-hero-details">{details}</div> : null}
         </div>
 
-        <div className="timeline-hero-timeline" aria-label={ariaLabel}>
-          <ol
-            className={`timeline-track${isDragging ? ' dragging' : ''}`}
-            role="list"
-            ref={trackRef}
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={handlePointerUp}
-            onPointerCancel={handlePointerCancel}
-            onPointerLeave={handlePointerLeave}
-          >
-            {positionedEvents.map((event) => (
-              <li
-                key={`${event.year}-${event.title}`}
-                className={`timeline-event ${event.side}`}
-              >
-                <div className="timeline-event-card">
-                  <span className="timeline-event-year">{event.year}</span>
-                  <h3 className="timeline-event-title">{event.title}</h3>
-                  <p className="timeline-event-text">{event.text}</p>
-                  {event.thumb ? (
-                    <img
-                      className="timeline-event-thumb"
-                      src={event.thumb}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  ) : null}
-                </div>
-              </li>
-            ))}
-          </ol>
+        <div className="timeline-hero-portrait-wrapper">
+          <img src={backgroundImage} alt={person.name} className="timeline-hero-portrait" />
         </div>
-
-        {details ? <div className="timeline-hero-details">{details}</div> : null}
       </div>
     </section>
   )

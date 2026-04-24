@@ -1,4 +1,9 @@
-export type Locale = 'de' | 'en'
+import { ru } from './locales/ru'
+import { tr } from './locales/tr'
+import { fr } from './locales/fr'
+import { es } from './locales/es'
+
+export type Locale = 'de' | 'en' | 'ru' | 'tr' | 'fr' | 'es'
 
 const baseUrl = import.meta.env.BASE_URL
 
@@ -64,7 +69,8 @@ export const content = {
       taxNumberLabel: 'Steuernummer',
     },
     nav: {
-      home: 'MR-Max (Mr Ausbildungssoftware)',
+      home: 'Startseite',
+      mrmax: 'MR-Max',
       certification: 'Zertifizierung',
       education: 'Kurse',
       consultation: 'Zweitmeinungsportal',
@@ -134,6 +140,32 @@ export const content = {
         subtitle:
           'Updates aus Forschung, Kursprogramm und Qualitätsstandards.',
       },
+    },
+    mrMax: {
+      hero: {
+        eyebrow: 'Ausbildungssoftware',
+        title: 'MR-Max – Sicherheit in der Mamma-MRT.',
+        subtitle: 'Die interaktive Fallbibliothek und Trainingsplattform für standardisierte Befundung und Protokollwissen.',
+        cta: 'Demo anfragen',
+      },
+      features: {
+        title: 'Funktionen & Vorteile',
+        subtitle: 'Alles, was Radiologien für eine fundierte Ausbildung benötigen.',
+        items: [
+          {
+            title: 'Interaktive Fallbibliothek',
+            text: 'Realistische Befundungsszenarien mit verifizierten Experten-Diagnosen.',
+          },
+          {
+            title: 'Strukturierte Prüfungen',
+            text: 'Wissensabfragen und Zertifikate zur Dokumentation der Lernfortschritte.',
+          },
+          {
+            title: 'Protokollwissen',
+            text: 'Detaillierte Anleitungen zu MRT-Protokollen und DWI-Strategien.',
+          },
+        ]
+      }
     },
     certification: {
       hero: {
@@ -231,7 +263,7 @@ export const content = {
         eyebrow: 'Prof. Kaiser',
         title: 'Erfahrung, Forschung, Verantwortung.',
         subtitle:
-          'Sektionsleiter Mammadiagnostik UMM und Oberarzt in der Klinik für Radiologie und Nuklearmedizin, Universitätsmedizin Mannheim.',
+          'Sektionsleiter Mammadiagnostik UMM, Oberarzt in der Klinik für Radiologie und Nuklearmedizin sowie ärztlicher Direktor des Mannheimer Mamma MRT Zentrums.',
       },
       profile: {
         title: 'Profil',
@@ -245,8 +277,8 @@ export const content = {
         person: {
           name: 'Prof. Dr. med. Clemens Kaiser',
           yearsOrTagline: 'Sektionsleiter Mammadiagnostik UMM',
-          subtitleLine: 'Oberarzt, Klinik fuer Radiologie und Nuklearmedizin',
-          subtitleLine2: 'Universitaetsmedizin Mannheim',
+          subtitleLine: 'Oberarzt & ärztlicher Direktor des Mannheimer Mamma MRT Zentrums',
+          subtitleLine2: 'Klinik für Radiologie und Nuklearmedizin, UMM',
         },
         // Timeline events: edit or replace these items as needed.
         events: [
@@ -340,8 +372,12 @@ export const content = {
         subtitle:
           'Ein spezialisiertes Team aus medizinischer Leitung, Radiolog:innen und administrativer Assistenz.',
         leadLabel: 'Medizinische Leitung',
-        assistantLabel: 'Administrative Assistenz (Platzhalter)',
-        radiologistsLabel: 'Fachradiolog:innen (Platzhalter)',
+        assistantLabel: 'Projektkoordinatorin',
+        assistantName: 'Esther Keller M.A.',
+        assistantImage: import.meta.env.BASE_URL + 'esther-keller.jpg',
+        radiologistsLabel: 'Funktionsoberärztin',
+        radiologistsName: 'Dr. med. Sabrina Fastenrath',
+        radiologistsImage: import.meta.env.BASE_URL + 'sabrina-fastenrath.jpg',
         partnersTitle: 'Kooperationspartner',
         partnersSubtitle:
           'Kooperationspartner aus Forschung und klinischer Praxis.',
@@ -392,6 +428,7 @@ export const content = {
             'Prof. Dr. med. Clemens Kaiser',
             'Dipl. Kfm. (EMA), B.A.',
             'Sektionsleiter Mammadiagnostik',
+            'Ärztlicher Direktor des Mannheimer Mamma MRT Zentrums',
             'Oberarzt in der Klinik für Radiologie und Nuklearmedizin, Universitätsmedizin Mannheim',
           ],
         },
@@ -537,7 +574,8 @@ export const content = {
       taxNumberLabel: 'Tax number',
     },
     nav: {
-      home: 'MR-Max (Mr Ausbildungssoftware)',
+      home: 'Home',
+      mrmax: 'MR-Max',
       certification: 'Certification',
       education: 'Courses',
       consultation: 'Second opinion portal',
@@ -607,6 +645,32 @@ export const content = {
         subtitle:
           'Updates from research, course program, and quality standards.',
       },
+    },
+    mrMax: {
+      hero: {
+        eyebrow: 'Training Software',
+        title: 'MR-Max – Confidence in Breast MRI.',
+        subtitle: 'The interactive case library and training platform for standardized reporting and protocol knowledge.',
+        cta: 'Request Demo',
+      },
+      features: {
+        title: 'Features & Benefits',
+        subtitle: 'Everything radiology teams need for sound education.',
+        items: [
+          {
+            title: 'Interactive Case Library',
+            text: 'Realistic reporting scenarios with verified expert diagnoses.',
+          },
+          {
+            title: 'Structured Assessments',
+            text: 'Knowledge tests and certificates to document learning progress.',
+          },
+          {
+            title: 'Protocol Knowledge',
+            text: 'Detailed guides on MRI protocols and DWI strategies.',
+          },
+        ]
+      }
     },
     certification: {
       hero: {
@@ -704,7 +768,7 @@ export const content = {
         eyebrow: 'Prof. Kaiser',
         title: 'Experience, research, responsibility.',
         subtitle:
-          'Head of Breast Imaging and senior physician in the Department of Radiology and Nuclear Medicine at Mannheim University Medical Center.',
+          'Head of Breast Imaging, Senior Physician in the Department of Radiology and Nuclear Medicine, and Medical Director of the Mannheim Breast MRI Center.',
       },
       profile: {
         title: 'Profile',
@@ -718,8 +782,8 @@ export const content = {
         person: {
           name: 'Prof. Dr. med. Clemens Kaiser',
           yearsOrTagline: 'Head of Breast Imaging, UMM',
-          subtitleLine: 'Senior Physician, Department of Radiology and Nuclear Medicine',
-          subtitleLine2: 'Mannheim University Medical Center',
+          subtitleLine: 'Senior Physician & Medical Director of the Mannheim Breast MRI Center',
+          subtitleLine2: 'Department of Radiology and Nuclear Medicine, UMM',
         },
         // Timeline events: edit or replace these items as needed.
         events: [
@@ -806,8 +870,12 @@ export const content = {
         subtitle:
           'A specialized team spanning medical leadership, radiologists, and administrative support.',
         leadLabel: 'Medical leadership',
-        assistantLabel: 'Administrative assistant (Placeholder)',
-        radiologistsLabel: 'Specialist radiologists (Placeholder)',
+        assistantLabel: 'Project Coordinator',
+        assistantName: 'Esther Keller M.A.',
+        assistantImage: import.meta.env.BASE_URL + 'esther-keller.jpg',
+        radiologistsLabel: 'Consultant',
+        radiologistsName: 'Dr. med. Sabrina Fastenrath',
+        radiologistsImage: import.meta.env.BASE_URL + 'sabrina-fastenrath.jpg',
         partnersTitle: 'Cooperation partners',
         partnersSubtitle:
           'Partners from research and clinical practice.',
@@ -988,6 +1056,10 @@ export const content = {
       },
     },
   },
+  ru,
+  tr,
+  fr,
+  es,
 } as const
 
 export const sharedContent = shared

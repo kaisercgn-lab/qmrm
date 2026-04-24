@@ -77,9 +77,13 @@ export const About = () => {
       <Section title={team.title} subtitle={team.subtitle}>
         <div className="team-grid">
           <article className="team-card">
-            <div className="team-placeholder">AA</div>
+            {team.assistantImage ? (
+              <img src={team.assistantImage} alt={team.assistantName} className="team-avatar" />
+            ) : (
+              <div className="team-placeholder">AA</div>
+            )}
             <span className="team-label">{team.assistantLabel}</span>
-            <h3>{locale === 'de' ? 'Name folgt' : 'Name to be added'}</h3>
+            <h3>{team.assistantName}</h3>
             <ul className="team-highlights">
               {team.assistantHighlights.map((item) => (
                 <li key={item}>{item}</li>
@@ -99,9 +103,13 @@ export const About = () => {
           </article>
 
           <article className="team-card">
-            <div className="team-placeholder">FR</div>
+            {team.radiologistsImage ? (
+              <img src={team.radiologistsImage} alt={team.radiologistsName} className="team-avatar" />
+            ) : (
+              <div className="team-placeholder">SF</div>
+            )}
             <span className="team-label">{team.radiologistsLabel}</span>
-            <h3>{locale === 'de' ? 'Team folgt' : 'Team to be added'}</h3>
+            <h3>{team.radiologistsName}</h3>
             <ul className="team-highlights">
               {team.radiologistHighlights.map((item) => (
                 <li key={item}>{item}</li>

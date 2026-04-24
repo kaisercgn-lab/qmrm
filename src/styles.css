@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
 :root {
-  --ink: #6b7984;
-  --teal: #6b7984;
-  --teal-dark: #4e5961;
-  --sand: #f0f2f3;
-  --stone: #f4f6f7;
+  --ink: #1a202c;
+  --teal: #2c7a7b;
+  --teal-dark: #234e52;
+  --sand: #edf2f7;
+  --stone: #f7fafc;
   --cream: #ffffff;
-  --accent: #da6689;
-  --accent-dark: #c25578;
-  --line: #d5dde1;
-  --shadow: 0 24px 60px rgba(107, 121, 132, 0.12);
-  --radius: 18px;
+  --accent: #d53f8c;
+  --accent-dark: #b83280;
+  --line: #e2e8f0;
+  --shadow: 0 20px 40px -10px rgba(0,0,0,0.1), 0 10px 20px -5px rgba(0,0,0,0.04);
+  --shadow-hover: 0 25px 50px -12px rgba(0,0,0,0.15), 0 15px 30px -8px rgba(0,0,0,0.06);
+  --radius: 20px;
 }
 
 * {
@@ -86,9 +87,11 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(107, 121, 132, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .top-bar {
@@ -111,10 +114,21 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  gap: 16px;
+  text-decoration: none;
 }
 
 .logo img {
   height: 74px;
+}
+
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 .main-nav {
@@ -306,13 +320,16 @@ p {
 }
 
 .primary-button {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
   color: white;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 15px -3px rgba(213, 63, 140, 0.3);
+  border: none;
 }
 
 .primary-button:hover {
-  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(213, 63, 140, 0.4);
+  background: linear-gradient(135deg, var(--accent-dark) 0%, #97266d 100%);
 }
 
 .ghost-button {
@@ -349,6 +366,12 @@ p {
   border-radius: var(--radius);
   border: 1px solid rgba(107, 121, 132, 0.18);
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .steps {
@@ -545,6 +568,14 @@ p {
   display: grid;
   place-items: center;
   letter-spacing: 0.12em;
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
 }
 
 .profile-details-grid {
