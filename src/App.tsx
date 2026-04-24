@@ -1,17 +1,19 @@
 import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, Suspense, lazy } from 'react'
+import { HelmetProvider } from 'react-helmet-async'
 import { SiteHeader } from './components/SiteHeader'
 import { SiteFooter } from './components/SiteFooter'
 import { LocaleProvider, useLocale } from './i18n'
 import { content, logoUrl, sharedContent } from './content'
-import { Home } from './pages/Home'
-import { Certification } from './pages/Certification'
-import { Education } from './pages/Education'
-import { Consultation } from './pages/Consultation'
-import { News } from './pages/News'
-import { About } from './pages/About'
-import { Contact } from './pages/Contact'
-import { Impressum } from './pages/Impressum'
+const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })))
+const MrMax = lazy(() => import('./pages/MrMax').then(m => ({ default: m.MrMax })))
+const Certification = lazy(() => import('./pages/Certification').then(m => ({ default: m.Certification })))
+const Education = lazy(() => import('./pages/Education').then(m => ({ default: m.Education })))
+const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ default: m.Consultation })))
+const News = lazy(() => import('./pages/News').then(m => ({ default: m.News })))
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })))
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })))
+const Impressum = lazy(() => import('./pages/Impressum').then(m => ({ default: m.Impressum })))
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -27,6 +29,7 @@ const AppShell = () => {
 
   const mainNavItems = useMemo(() => [
     { path: '/', label: t.nav.home },
+    { path: '/mr-max', label: t.nav.mrmax },
     { path: '/consultation', label: t.nav.consultation },
     { path: '/certification', label: t.nav.certification },
     { path: '/education', label: t.nav.education },
@@ -45,16 +48,19 @@ const AppShell = () => {
       <div className="background-orb orb-two" />
       <SiteHeader logoUrl={logoUrl} tagline={t.meta.siteTagline} navItems={mainNavItems} />
       <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/certification" element={<Certification />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/consultation" element={<Consultation />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/impressum" element={<Impressum />} />
-        </Routes>
+        <Suspense fallback={<div style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Lade...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mr-max" element={<MrMax />} />
+            <Route path="/certification" element={<Certification />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/consultation" element={<Consultation />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/impressum" element={<Impressum />} />
+          </Routes>
+        </Suspense>
       </main>
       <SiteFooter
         navItems={footerNavItems}
@@ -74,12 +80,14 @@ const AppShell = () => {
 }
 
 const App = () => (
-  <LocaleProvider>
-    <HashRouter>
-      <ScrollToTop />
-      <AppShell />
-    </HashRouter>
-  </LocaleProvider>
+  <HelmetProvider>
+    <LocaleProvider>
+      <HashRouter>
+        <ScrollToTop />
+        <AppShell />
+      </HashRouter>
+    </LocaleProvider>
+  </HelmetProvider>
 )
 
 export default App

@@ -22,6 +22,7 @@ export const SiteHeader = ({ logoUrl, tagline, navItems }: SiteHeaderProps) => {
       <div className="nav-row">
         <NavLink to="/" className="logo" aria-label="Home">
           <img src={logoUrl} alt="QMRM GmbH Logo" />
+          <span className="logo-text">QMRM GmbH</span>
         </NavLink>
         <nav className="main-nav" aria-label="Primary">
           {navItems.map((item) => (

@@ -8,8 +8,8 @@ const LocaleContext = createContext<{
 
 const readStoredLocale = (): Locale => {
   if (typeof window === 'undefined') return 'de'
-  const stored = window.localStorage.getItem('locale')
-  return stored === 'en' || stored === 'de' ? stored : 'de'
+  const stored = window.localStorage.getItem('locale') as Locale
+  return ['de', 'en', 'ru', 'tr', 'fr', 'es'].includes(stored) ? stored : 'de'
 }
 
 export const LocaleProvider = ({ children }: { children: React.ReactNode }) => {

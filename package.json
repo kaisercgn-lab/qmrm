@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-helmet-async": "latest",
     "react-router-dom": "latest"
   },
   "devDependencies": {

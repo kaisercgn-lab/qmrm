@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLocale } from '../i18n'
 
 export const LanguageToggle = () => {
@@ -5,23 +6,19 @@ export const LanguageToggle = () => {
 
   return (
     <div className="language-toggle" role="group" aria-label="Language toggle">
-      <button
-        type="button"
-        className={locale === 'de' ? 'active' : ''}
-        onClick={() => setLocale('de')}
-        aria-pressed={locale === 'de'}
-      >
-        DE
-      </button>
-      <span aria-hidden="true">/</span>
-      <button
-        type="button"
-        className={locale === 'en' ? 'active' : ''}
-        onClick={() => setLocale('en')}
-        aria-pressed={locale === 'en'}
-      >
-        EN
-      </button>
+      {(['de', 'en', 'ru', 'tr', 'fr', 'es'] as const).map((lang, index, arr) => (
+        <React.Fragment key={lang}>
+          <button
+            type="button"
+            className={locale === lang ? 'active' : ''}
+            onClick={() => setLocale(lang)}
+            aria-pressed={locale === lang}
+          >
+            {lang.toUpperCase()}
+          </button>
+          {index < arr.length - 1 && <span aria-hidden="true">/</span>}
+        </React.Fragment>
+      ))}
     </div>
   )
 }
