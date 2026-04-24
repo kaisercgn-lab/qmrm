@@ -232,6 +232,12 @@ export const content = {
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant.',
         },
       ],
+      upload: {
+        title: 'DICOM Upload',
+        text: 'Laden Sie hier Ihre DICOM-Daten hoch.',
+        requirement: 'Voraussetzung für die Zweitmeinung ist die Nutzung der QMRM-Protokolle, die unter MR-Max (Protokollwissen) heruntergeladen werden können.',
+        button: 'Dateien hochladen',
+      }
     },
     news: {
       hero: {
@@ -737,6 +743,12 @@ export const content = {
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant.',
         },
       ],
+      upload: {
+        title: 'DICOM Upload',
+        text: 'Upload your DICOM data here.',
+        requirement: 'A prerequisite for the second opinion is the use of the QMRM protocols, which can be downloaded under MR-Max (Protocol Knowledge).',
+        button: 'Upload Files',
+      }
     },
     news: {
       hero: {

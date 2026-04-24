@@ -6,7 +6,7 @@ export const tr = {
   footer: {
     navigation: 'Navigasyon',
     newsletterTitle: 'Bülten',
-    newsletterText: 'Araştırmalar ve kurs programımız hakkında güncellemeler alın.',
+    newsletterText: 'Site şu anda yapım aşamasındadır. Haberdar olmak için bültene kaydolun.',
     newsletterCta: 'Kayıt Ol',
     impressumLabel: 'Künye',
     taxNumberLabel: 'Vergi Numarası',
@@ -107,6 +107,13 @@ export const tr = {
       ]
     }
   },
+    download: {
+      title: 'Protokol Bilgisi',
+      text: 'Güncel QMRM protokolünü (.edx) buradan indirin.',
+      button: '.edx Dosyasını İndir',
+      fileUrl: '/protocol.edx'
+    },
+
   certification: {
     hero: {
       eyebrow: 'Sertifikasyon',
@@ -170,6 +177,13 @@ export const tr = {
       },
     ],
   },
+    upload: {
+      title: 'DICOM Yükleme',
+      text: 'DICOM verilerinizi buraya yükleyin.',
+      requirement: 'İkinci bir görüş için ön koşul, MR-Max (Protokol Bilgisi) altında indirilebilen QMRM protokollerinin kullanılmasıdır.',
+      button: 'Dosyaları Yükle',
+    },
+
   news: {
     hero: {
       eyebrow: 'Haberler',

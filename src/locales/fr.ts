@@ -6,7 +6,7 @@ export const fr = {
   footer: {
     navigation: 'Navigation',
     newsletterTitle: 'Newsletter',
-    newsletterText: 'Recevez des mises à jour sur nos recherches et programmes de cours.',
+    newsletterText: 'Le site est actuellement en construction. Inscrivez-vous à la newsletter pour rester informé.',
     newsletterCta: 'S\'abonner',
     impressumLabel: 'Mentions légales',
     taxNumberLabel: 'Numéro d\'identification fiscale',
@@ -107,6 +107,13 @@ export const fr = {
       ]
     }
   },
+    download: {
+      title: 'Connaissance des protocoles',
+      text: 'Téléchargez le protocole QMRM actuel (.edx) ici.',
+      button: 'Télécharger le fichier .edx',
+      fileUrl: '/protocol.edx'
+    },
+
   certification: {
     hero: {
       eyebrow: 'Certification',
@@ -170,6 +177,13 @@ export const fr = {
       },
     ],
   },
+    upload: {
+      title: 'Téléchargement DICOM',
+      text: 'Téléchargez vos données DICOM ici.',
+      requirement: 'Une condition préalable au deuxième avis est l\'utilisation des protocoles QMRM, qui peuvent être téléchargés sous MR-Max (Connaissance des protocoles).',
+      button: 'Télécharger des fichiers',
+    },
+
   news: {
     hero: {
       eyebrow: 'Actualités',

@@ -6,7 +6,7 @@ export const ru = {
   footer: {
     navigation: 'Навигация',
     newsletterTitle: 'Новостная рассылка',
-    newsletterText: 'Получайте обновления о наших исследованиях и курсах.',
+    newsletterText: 'Сайт находится в стадии разработки. Подпишитесь на рассылку, чтобы оставаться в курсе.',
     newsletterCta: 'Подписаться',
     impressumLabel: 'Выходные данные',
     taxNumberLabel: 'Налоговый номер',
@@ -107,6 +107,13 @@ export const ru = {
       ]
     }
   },
+    download: {
+      title: 'База протоколов',
+      text: 'Скачайте актуальный протокол QMRM (.edx) здесь.',
+      button: 'Скачать файл .edx',
+      fileUrl: '/protocol.edx'
+    },
+
   certification: {
     hero: {
       eyebrow: 'Сертификация',
@@ -170,6 +177,13 @@ export const ru = {
       },
     ],
   },
+    upload: {
+      title: 'Загрузка DICOM',
+      text: 'Загрузите ваши данные DICOM здесь.',
+      requirement: 'Обязательным условием для второго мнения является использование протоколов QMRM, которые можно скачать в разделе MR-Max (Знание протоколов).',
+      button: 'Загрузить файлы',
+    },
+
   news: {
     hero: {
       eyebrow: 'Новости',
