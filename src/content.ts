@@ -244,9 +244,14 @@ export const content = {
         eyebrow: 'News',
         title: 'Neuigkeiten & Veröffentlichungen',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in mi at.',
+          'Aktuelle Informationen rund um QMRM. Bitte beachten Sie, dass sich unsere Website und die Zertifizierungsprozesse derzeit im Aufbau befinden.',
       },
       items: [
+        {
+          title: 'Website und Zertifizierungsprozesse im Aufbau',
+          date: '05.05.2026',
+          text: 'Wir arbeiten derzeit intensiv an unserer neuen Website und den Strukturen für die Zertifizierungsprozesse. In Kürze finden Sie hier weitere Informationen.',
+        },
         {
           title: 'Neue Kursreihe: Mamma-MRT kompakt',
           date: '02.02.2026',
@@ -755,9 +760,14 @@ export const content = {
         eyebrow: 'News',
         title: 'Updates & publications',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in mi at.',
+          'Latest news from QMRM. Please note that our website and certification processes are currently under construction.',
       },
       items: [
+        {
+          title: 'Website and Certification Under Construction',
+          date: '05 May 2026',
+          text: 'We are currently working hard on our new website and the structures for the certification processes. More information will be available here soon.',
+        },
         {
           title: 'New course series: Breast MRI essentials',
           date: '02 Feb 2026',
