@@ -63,8 +63,8 @@ export const content = {
       navigation: 'Navigation',
       newsletterTitle: 'Newsletter',
       newsletterText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel semper lorem.',
-      newsletterCta: 'Lorem ipsum',
+        'Stay up to date with the latest developments in breast MRI and our services.',
+      newsletterCta: 'Sign up',
       impressumLabel: 'Impressum',
       taxNumberLabel: 'Steuernummer',
     },
@@ -73,7 +73,7 @@ export const content = {
       mrmax: 'MR-Max',
       certification: 'Zertifizierung',
       education: 'Kurse',
-      consultation: 'Zweitmeinungsportal',
+      consultation: 'Beratung',
       news: 'News',
       about: 'Wir über uns',
       contact: 'Kontakt',
@@ -181,20 +181,20 @@ export const content = {
         eyebrow: 'Zertifizierung',
         title: 'Mamma-MRT Zertifizierung mit System.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet ligula et.',
+          'Ein transparenter und begleiteter Prozess von der ersten Bestandsaufnahme bis zur erfolgreichen Auszeichnung.',
       },
       sections: [
         {
           title: 'Programmübersicht',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet turpis eu velit tempus sagittis.',
+          text: 'Wir analysieren gemeinsam Ihre aktuelle Situation und definieren die Ziele für die Mamma-MRT.',
         },
         {
           title: 'Kriterien & Dokumentation',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien sed lorem cursus vestibulum.',
+          text: 'Unsere Experten prüfen Ihre Abläufe, Bildqualität und Befundungsstandards anhand klarer Kriterien.',
         },
         {
           title: 'Audit & Begleitung',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, massa sed faucibus.',
+          text: 'Nach erfolgreichem Abschluss erhalten Sie unser Qualitätssiegel zur Dokumentation Ihrer Expertise.',
         },
       ],
     },
@@ -203,20 +203,20 @@ export const content = {
         eyebrow: 'Weiterbildung',
         title: 'Fortbildung für eine neue Qualitätsstufe.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at justo sed.',
+          'Evidenzbasierte und praxisnahe Fortbildungen für eine sichere und effiziente Diagnostik.',
       },
       tracks: [
         {
           title: 'Grundlagenmodul',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget dignissim augue.',
+          text: 'Vermittlung der Basiskenntnisse zu Indikationen, Untersuchungstechnik und standardisierter Befundung.',
         },
         {
           title: 'Praxisworkshops',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt.',
+          text: 'Vertiefung des Wissens anhand komplexer Fallbeispiele und spezieller diagnostischer Fragestellungen.',
         },
         {
           title: 'Peer-Review Sessions',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet, elit at.',
+          text: 'Praxistraining zur optimalen Patientenlagerung, Protokollauswahl und Vermeidung von Artefakten.',
         },
       ],
     },
@@ -225,20 +225,23 @@ export const content = {
         eyebrow: 'Beratung',
         title: 'Strategische Beratung rund um Mamma-MRT.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim.',
+          'Wir unterstützen Sie mit maßgeschneiderten Konzepten bei der Etablierung und Optimierung Ihrer Mamma-MRT-Diagnostik.',
       },
       offerings: [
         {
           title: 'Standortanalyse',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed lorem.',
+          text: 'Umfassende Bewertung Ihrer technischen und personellen Ressourcen für ein optimales Setup.',
+          link: '/consultation/analysis',
         },
         {
           title: 'Prozessdesign',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non eros.',
+          text: 'Entwicklung reibungsloser Workflows von der Terminvergabe bis zur strukturierten Befundübermittlung.',
+          link: '/consultation/process',
         },
         {
           title: 'Qualitätsmonitoring',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant.',
+          text: 'Laufende Begleitung und Überprüfung Ihrer Bildqualität und diagnostischen Kennzahlen.',
+          link: '/consultation/quality',
         },
       ],
       upload: {
@@ -526,7 +529,7 @@ export const content = {
         eyebrow: 'Kontakt',
         title: 'Wir freuen uns auf Ihre Anfrage.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta.',
+          'We look forward to hearing from you and will reply as soon as possible.',
       },
       form: {
         name: 'Name',
@@ -534,7 +537,7 @@ export const content = {
         organization: 'Organisation',
         message: 'Nachricht',
         submit: 'Nachricht senden',
-        hint: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis.',
+        hint: 'Please fill out all required fields so we can process your request.',
       },
       badges: ['Zertifizierung', 'Weiterbildung', 'Beratung'],
     },
@@ -543,7 +546,7 @@ export const content = {
         eyebrow: 'Impressum',
         title: 'Rechtliche Angaben',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.',
+          'Our team is available to answer your questions regarding certification and MR-Max.',
       },
       legal: {
         sections: [
@@ -588,8 +591,8 @@ export const content = {
       navigation: 'Navigation',
       newsletterTitle: 'Newsletter',
       newsletterText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel semper lorem.',
-      newsletterCta: 'Lorem ipsum',
+        'Stay up to date with the latest developments in breast MRI and our services.',
+      newsletterCta: 'Sign up',
       impressumLabel: 'Imprint',
       taxNumberLabel: 'Tax number',
     },
@@ -598,7 +601,7 @@ export const content = {
       mrmax: 'MR-Max',
       certification: 'Certification',
       education: 'Courses',
-      consultation: 'Second opinion portal',
+      consultation: 'Consulting',
       news: 'News',
       about: 'About us',
       contact: 'Contact',
@@ -706,20 +709,20 @@ export const content = {
         eyebrow: 'Certification',
         title: 'Breast MRI certification with clarity.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet ligula et.',
+          'Ein transparenter und begleiteter Prozess von der ersten Bestandsaufnahme bis zur erfolgreichen Auszeichnung.',
       },
       sections: [
         {
           title: 'Program overview',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet turpis eu velit tempus sagittis.',
+          text: 'Wir analysieren gemeinsam Ihre aktuelle Situation und definieren die Ziele für die Mamma-MRT.',
         },
         {
           title: 'Criteria & documentation',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien sed lorem cursus vestibulum.',
+          text: 'Unsere Experten prüfen Ihre Abläufe, Bildqualität und Befundungsstandards anhand klarer Kriterien.',
         },
         {
           title: 'Audit & guidance',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, massa sed faucibus.',
+          text: 'Nach erfolgreichem Abschluss erhalten Sie unser Qualitätssiegel zur Dokumentation Ihrer Expertise.',
         },
       ],
     },
@@ -728,20 +731,20 @@ export const content = {
         eyebrow: 'Education',
         title: 'Training for a new level of quality.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at justo sed.',
+          'Evidenzbasierte und praxisnahe Fortbildungen für eine sichere und effiziente Diagnostik.',
       },
       tracks: [
         {
           title: 'Foundations module',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget dignissim augue.',
+          text: 'Vermittlung der Basiskenntnisse zu Indikationen, Untersuchungstechnik und standardisierter Befundung.',
         },
         {
           title: 'Hands-on workshops',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt.',
+          text: 'Vertiefung des Wissens anhand komplexer Fallbeispiele und spezieller diagnostischer Fragestellungen.',
         },
         {
           title: 'Peer review sessions',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet, elit at.',
+          text: 'Praxistraining zur optimalen Patientenlagerung, Protokollauswahl und Vermeidung von Artefakten.',
         },
       ],
     },
@@ -750,20 +753,23 @@ export const content = {
         eyebrow: 'Consulting',
         title: 'Strategic guidance for breast MRI.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim.',
+          'We support you with customized concepts for establishing and optimizing your breast MRI diagnostics.',
       },
       offerings: [
         {
           title: 'Site analysis',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed lorem.',
+          text: 'Comprehensive evaluation of your technical and personnel resources for an optimal setup.',
+          link: '/consultation/analysis',
         },
         {
           title: 'Process design',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non eros.',
+          text: 'Development of smooth workflows from scheduling to structured report delivery.',
+          link: '/consultation/process',
         },
         {
           title: 'Quality monitoring',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant.',
+          text: 'Continuous support and review of your image quality and diagnostic metrics.',
+          link: '/consultation/quality',
         },
       ],
       upload: {
@@ -1043,7 +1049,7 @@ export const content = {
         eyebrow: 'Contact',
         title: 'We look forward to your request.',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta.',
+          'We look forward to hearing from you and will reply as soon as possible.',
       },
       form: {
         name: 'Name',
@@ -1051,7 +1057,7 @@ export const content = {
         organization: 'Organization',
         message: 'Message',
         submit: 'Send message',
-        hint: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis.',
+        hint: 'Please fill out all required fields so we can process your request.',
       },
       badges: ['Certification', 'Education', 'Consulting'],
     },
@@ -1060,7 +1066,7 @@ export const content = {
         eyebrow: 'Imprint',
         title: 'Legal information',
         subtitle:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus.',
+          'Our team is available to answer your questions regarding certification and MR-Max.',
       },
       legal: {
         sections: [

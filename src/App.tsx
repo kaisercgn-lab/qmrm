@@ -14,6 +14,9 @@ const MrMaxProtocols = lazy(() => import('./pages/MrMaxProtocols').then(m => ({ 
 const Certification = lazy(() => import('./pages/Certification').then(m => ({ default: m.Certification })))
 const Education = lazy(() => import('./pages/Education').then(m => ({ default: m.Education })))
 const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ default: m.Consultation })))
+const ConsultationAnalysis = lazy(() => import('./pages/ConsultationAnalysis').then(m => ({ default: m.ConsultationAnalysis })))
+const ConsultationProcess = lazy(() => import('./pages/ConsultationProcess').then(m => ({ default: m.ConsultationProcess })))
+const ConsultationQuality = lazy(() => import('./pages/ConsultationQuality').then(m => ({ default: m.ConsultationQuality })))
 const News = lazy(() => import('./pages/News').then(m => ({ default: m.News })))
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })))
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })))
@@ -62,6 +65,9 @@ const AppShell = () => {
             <Route path="/certification" element={<Certification />} />
             <Route path="/education" element={<Education />} />
             <Route path="/consultation" element={<Consultation />} />
+            <Route path="/consultation/analysis" element={<ConsultationAnalysis />} />
+            <Route path="/consultation/process" element={<ConsultationProcess />} />
+            <Route path="/consultation/quality" element={<ConsultationQuality />} />
             <Route path="/news" element={<News />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
