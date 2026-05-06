@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import { SiteHeader } from './components/SiteHeader'
 import { SiteFooter } from './components/SiteFooter'
 import { LocaleProvider, useLocale } from './i18n'
+import { NewsBanner } from './components/NewsBanner'
 import { content, logoUrl, sharedContent } from './content'
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })))
 const MrMax = lazy(() => import('./pages/MrMax').then(m => ({ default: m.MrMax })))
@@ -62,16 +63,13 @@ const AppShell = () => {
           </Routes>
         </Suspense>
       </main>
+      <NewsBanner />
       <SiteFooter
         navItems={footerNavItems}
         companyName={sharedContent.company.name}
         addressLines={sharedContent.company.addressLines}
         phone={sharedContent.company.phone}
         email={sharedContent.company.email}
-        navigationLabel={t.footer.navigation}
-        newsletterTitle={t.footer.newsletterTitle}
-        newsletterText={t.footer.newsletterText}
-        newsletterCta={t.footer.newsletterCta}
         impressumLabel={t.footer.impressumLabel}
         taxNumberLabel={t.footer.taxNumberLabel}
       />

@@ -893,3 +893,53 @@ textarea {
     align-items: stretch;
   }
 }
+
+/* News Banner Marquee */
+.news-banner-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 10px 0;
+  margin: 20px 7vw 30px 7vw;
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(107, 121, 132, 0.15);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  font-size: 0.95rem;
+}
+
+.news-marquee {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.news-marquee-content {
+  display: flex;
+  animation: scroll-marquee 30s linear infinite;
+}
+
+.news-marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.news-marquee-item {
+  padding: 0 40px;
+  color: var(--teal-dark);
+}
+
+.news-marquee-item strong {
+  color: var(--accent);
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Adjust footer grid for removed newsletter */
+.footer-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
