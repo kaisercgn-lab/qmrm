@@ -8,6 +8,9 @@ import { NewsBanner } from './components/NewsBanner'
 import { content, logoUrl, sharedContent } from './content'
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })))
 const MrMax = lazy(() => import('./pages/MrMax').then(m => ({ default: m.MrMax })))
+const MrMaxLibrary = lazy(() => import('./pages/MrMaxLibrary').then(m => ({ default: m.MrMaxLibrary })))
+const MrMaxAssessments = lazy(() => import('./pages/MrMaxAssessments').then(m => ({ default: m.MrMaxAssessments })))
+const MrMaxProtocols = lazy(() => import('./pages/MrMaxProtocols').then(m => ({ default: m.MrMaxProtocols })))
 const Certification = lazy(() => import('./pages/Certification').then(m => ({ default: m.Certification })))
 const Education = lazy(() => import('./pages/Education').then(m => ({ default: m.Education })))
 const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ default: m.Consultation })))
@@ -53,6 +56,9 @@ const AppShell = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mr-max" element={<MrMax />} />
+            <Route path="/mr-max/library" element={<MrMaxLibrary />} />
+            <Route path="/mr-max/assessments" element={<MrMaxAssessments />} />
+            <Route path="/mr-max/protocols" element={<MrMaxProtocols />} />
             <Route path="/certification" element={<Certification />} />
             <Route path="/education" element={<Education />} />
             <Route path="/consultation" element={<Consultation />} />
