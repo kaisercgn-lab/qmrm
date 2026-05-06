@@ -32,7 +32,7 @@ export const Home = () => {
               <span>{item.date}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <Link to="/news">Lorem ipsum</Link>
+              <Link to="/news">{locale === 'de' ? 'Mehr lesen' : 'Read more'}</Link>
             </article>
           ))}
         </div>
