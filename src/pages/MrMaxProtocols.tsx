@@ -35,7 +35,7 @@ export const MrMaxProtocols = () => {
               : 'Here you can download the Siemens 1.5T EDX protocol for breast MRI.'}
           </p>
           <a 
-            href="/Kaiser1.5T_VD.edx" 
+            href={`${import.meta.env.BASE_URL}Kaiser1.5T_VD.edx`}
             download="Kaiser1.5T_VD.edx"
             className="primary-button" 
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
