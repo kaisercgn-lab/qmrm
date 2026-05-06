@@ -98,26 +98,32 @@ export const content = {
           {
             title: 'MR-Max Ausbildungssoftware',
             text: 'Interaktive Fallbibliothek, strukturierte Prüfungen und Protokollwissen für eine sichere Befundung.',
+            link: '/mr-max',
           },
           {
             title: 'Zweitmeinungsportal',
             text: 'Standardisierte Zweitbefundung durch erfahrene Expert:innen mit nachvollziehbaren Empfehlungen.',
+            link: '/consultation',
           },
           {
             title: 'Zertifizierung',
             text: 'Auditierung von Zentren, definierte Qualitätskriterien und kontinuierliches Monitoring.',
+            link: '/certification',
           },
           {
             title: 'Kurse & Workshops',
             text: 'Fortbildungen für Radiolog:innen und MTR – praxisnah, modular und evidenzbasiert.',
+            link: '/education',
           },
           {
             title: 'Protokolle & Technik',
             text: 'Optimierte MR-Protokolle, DWI und Kontrastmittelstrategien für hohe Bildqualität.',
+            link: '/mr-max',
           },
           {
             title: 'Beratung & Implementierung',
             text: 'Begleitung beim Aufbau oder der Optimierung eines Mamma-MRT-Angebots.',
+            link: '/consultation',
           },
         ],
       },
@@ -614,26 +620,32 @@ export const content = {
           {
             title: 'MR-Max training software',
             text: 'Interactive case library, structured assessments, and protocol knowledge for confident reporting.',
+            link: '/mr-max',
           },
           {
             title: 'Second-opinion portal',
             text: 'Structured second reads by experienced experts with clear recommendations.',
+            link: '/consultation',
           },
           {
             title: 'Certification',
             text: 'Center audits, defined quality criteria, and continuous monitoring.',
+            link: '/certification',
           },
           {
             title: 'Courses & workshops',
             text: 'Practical training for radiologists and technologists — modular and evidence-based.',
+            link: '/education',
           },
           {
             title: 'Protocols & technology',
             text: 'Optimized MRI protocols, DWI and contrast strategies for high image quality.',
+            link: '/mr-max',
           },
           {
             title: 'Consulting & implementation',
             text: 'Guidance to set up or optimize a breast MRI service.',
+            link: '/consultation',
           },
         ],
       },

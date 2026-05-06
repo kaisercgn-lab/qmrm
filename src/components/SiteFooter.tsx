@@ -8,9 +8,6 @@ type SiteFooterProps = {
   phone: string
   email: string
   navigationLabel: string
-  newsletterTitle: string
-  newsletterText: string
-  newsletterCta: string
   impressumLabel: string
   taxNumberLabel: string
 }
@@ -22,9 +19,6 @@ export const SiteFooter = ({
   phone,
   email,
   navigationLabel,
-  newsletterTitle,
-  newsletterText,
-  newsletterCta,
   impressumLabel,
   taxNumberLabel,
 }: SiteFooterProps) => {
@@ -48,13 +42,6 @@ export const SiteFooter = ({
               </NavLink>
             ))}
           </div>
-        </div>
-        <div>
-          <h4>{newsletterTitle}</h4>
-          <p>{newsletterText}</p>
-          <button className="ghost-button" type="button">
-            {newsletterCta}
-          </button>
         </div>
       </div>
       <div className="footer-bottom">
