@@ -161,14 +161,17 @@ export const content = {
           {
             title: 'Interaktive Fallbibliothek',
             text: 'Realistische Befundungsszenarien mit verifizierten Experten-Diagnosen.',
+            link: '/mr-max/library',
           },
           {
             title: 'Strukturierte Prüfungen',
             text: 'Wissensabfragen und Zertifikate zur Dokumentation der Lernfortschritte.',
+            link: '/mr-max/assessments',
           },
           {
             title: 'Protokollwissen',
             text: 'Detaillierte Anleitungen zu MRT-Protokollen und DWI-Strategien.',
+            link: '/mr-max/protocols',
           },
         ]
       }
@@ -683,14 +686,17 @@ export const content = {
           {
             title: 'Interactive Case Library',
             text: 'Realistic reporting scenarios with verified expert diagnoses.',
+            link: '/mr-max/library',
           },
           {
             title: 'Structured Assessments',
             text: 'Knowledge tests and certificates to document learning progress.',
+            link: '/mr-max/assessments',
           },
           {
             title: 'Protocol Knowledge',
             text: 'Detailed guides on MRI protocols and DWI strategies.',
+            link: '/mr-max/protocols',
           },
         ]
       }
