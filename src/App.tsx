@@ -70,6 +70,7 @@ const AppShell = () => {
         addressLines={sharedContent.company.addressLines}
         phone={sharedContent.company.phone}
         email={sharedContent.company.email}
+        navigationLabel={t.footer.navigation}
         impressumLabel={t.footer.impressumLabel}
         taxNumberLabel={t.footer.taxNumberLabel}
       />
