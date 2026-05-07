@@ -38,8 +38,8 @@ const shared = {
   professor: {
     name: 'Prof. Dr. med. Clemens Kaiser',
     affiliation: 'Universitätsmedizin Mannheim',
-    titleDe: 'Sektionsleiter Mammadiagnostik UMM',
-    titleEn: 'Head of Breast Imaging, UMM',
+    titleDe: 'Sektionsleiter Mammadiagnostik UMM & Ärztlicher Direktor des Mannheimer MRT Zentrums MMZ',
+    titleEn: 'Head of Breast Imaging UMM & Medical Director of the Mannheim MRI Center MMZ',
     credentials: 'Dipl. Kfm. (EMA), B.A.',
     phone: '0621-383-8694',
     email: 'mmz@umm.de',
@@ -299,7 +299,7 @@ export const content = {
       timeline: {
         person: {
           name: 'Prof. Dr. med. Clemens Kaiser',
-          yearsOrTagline: 'Sektionsleiter Mammadiagnostik UMM',
+          yearsOrTagline: 'Sektionsleiter Mammadiagnostik UMM & Ärztlicher Direktor MMZ',
           subtitleLine: 'Oberarzt & ärztlicher Direktor des Mannheimer Mamma MRT Zentrums',
           subtitleLine2: 'Klinik für Radiologie und Nuklearmedizin, UMM',
         },
@@ -827,7 +827,7 @@ export const content = {
       timeline: {
         person: {
           name: 'Prof. Dr. med. Clemens Kaiser',
-          yearsOrTagline: 'Head of Breast Imaging, UMM',
+          yearsOrTagline: 'Head of Breast Imaging UMM & Medical Director MMZ',
           subtitleLine: 'Senior Physician & Medical Director of the Mannheim Breast MRI Center',
           subtitleLine2: 'Department of Radiology and Nuclear Medicine, UMM',
         },
