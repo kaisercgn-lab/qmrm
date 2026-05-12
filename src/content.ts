@@ -187,14 +187,17 @@ export const content = {
         {
           title: 'Programmübersicht',
           text: 'Wir analysieren gemeinsam Ihre aktuelle Situation und definieren die Ziele für die Mamma-MRT.',
+          link: '/certification/overview',
         },
         {
           title: 'Kriterien & Dokumentation',
           text: 'Unsere Experten prüfen Ihre Abläufe, Bildqualität und Befundungsstandards anhand klarer Kriterien.',
+          link: '/certification/criteria',
         },
         {
           title: 'Audit & Begleitung',
           text: 'Nach erfolgreichem Abschluss erhalten Sie unser Qualitätssiegel zur Dokumentation Ihrer Expertise.',
+          link: '/certification/audit',
         },
       ],
     },
@@ -709,20 +712,23 @@ export const content = {
         eyebrow: 'Certification',
         title: 'Breast MRI certification with clarity.',
         subtitle:
-          'Ein transparenter und begleiteter Prozess von der ersten Bestandsaufnahme bis zur erfolgreichen Auszeichnung.',
+          'A transparent and guided process from the initial assessment to the successful award.',
       },
       sections: [
         {
           title: 'Program overview',
-          text: 'Wir analysieren gemeinsam Ihre aktuelle Situation und definieren die Ziele für die Mamma-MRT.',
+          text: 'Together, we analyze your current situation and define the goals for breast MRI.',
+          link: '/certification/overview',
         },
         {
           title: 'Criteria & documentation',
-          text: 'Unsere Experten prüfen Ihre Abläufe, Bildqualität und Befundungsstandards anhand klarer Kriterien.',
+          text: 'Our experts review your workflows, image quality, and diagnostic standards based on clear criteria.',
+          link: '/certification/criteria',
         },
         {
           title: 'Audit & guidance',
-          text: 'Nach erfolgreichem Abschluss erhalten Sie unser Qualitätssiegel zur Dokumentation Ihrer Expertise.',
+          text: 'Upon successful completion, you will receive our quality seal to document your expertise.',
+          link: '/certification/audit',
         },
       ],
     },

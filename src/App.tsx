@@ -12,6 +12,9 @@ const MrMaxLibrary = lazy(() => import('./pages/MrMaxLibrary').then(m => ({ defa
 const MrMaxAssessments = lazy(() => import('./pages/MrMaxAssessments').then(m => ({ default: m.MrMaxAssessments })))
 const MrMaxProtocols = lazy(() => import('./pages/MrMaxProtocols').then(m => ({ default: m.MrMaxProtocols })))
 const Certification = lazy(() => import('./pages/Certification').then(m => ({ default: m.Certification })))
+const CertificationOverview = lazy(() => import('./pages/CertificationOverview').then(m => ({ default: m.CertificationOverview })))
+const CertificationCriteria = lazy(() => import('./pages/CertificationCriteria').then(m => ({ default: m.CertificationCriteria })))
+const CertificationAudit = lazy(() => import('./pages/CertificationAudit').then(m => ({ default: m.CertificationAudit })))
 const Education = lazy(() => import('./pages/Education').then(m => ({ default: m.Education })))
 const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ default: m.Consultation })))
 const ConsultationAnalysis = lazy(() => import('./pages/ConsultationAnalysis').then(m => ({ default: m.ConsultationAnalysis })))
@@ -63,6 +66,9 @@ const AppShell = () => {
             <Route path="/mr-max/assessments" element={<MrMaxAssessments />} />
             <Route path="/mr-max/protocols" element={<MrMaxProtocols />} />
             <Route path="/certification" element={<Certification />} />
+            <Route path="/certification/overview" element={<CertificationOverview />} />
+            <Route path="/certification/criteria" element={<CertificationCriteria />} />
+            <Route path="/certification/audit" element={<CertificationAudit />} />
             <Route path="/education" element={<Education />} />
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/consultation/analysis" element={<ConsultationAnalysis />} />
