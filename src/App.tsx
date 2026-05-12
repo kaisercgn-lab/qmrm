@@ -16,6 +16,9 @@ const CertificationOverview = lazy(() => import('./pages/CertificationOverview')
 const CertificationCriteria = lazy(() => import('./pages/CertificationCriteria').then(m => ({ default: m.CertificationCriteria })))
 const CertificationAudit = lazy(() => import('./pages/CertificationAudit').then(m => ({ default: m.CertificationAudit })))
 const Education = lazy(() => import('./pages/Education').then(m => ({ default: m.Education })))
+const EducationBasics = lazy(() => import('./pages/EducationBasics').then(m => ({ default: m.EducationBasics })))
+const EducationMasterclass = lazy(() => import('./pages/EducationMasterclass').then(m => ({ default: m.EducationMasterclass })))
+const EducationPeerReview = lazy(() => import('./pages/EducationPeerReview').then(m => ({ default: m.EducationPeerReview })))
 const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ default: m.Consultation })))
 const ConsultationAnalysis = lazy(() => import('./pages/ConsultationAnalysis').then(m => ({ default: m.ConsultationAnalysis })))
 const ConsultationProcess = lazy(() => import('./pages/ConsultationProcess').then(m => ({ default: m.ConsultationProcess })))
@@ -70,6 +73,9 @@ const AppShell = () => {
             <Route path="/certification/criteria" element={<CertificationCriteria />} />
             <Route path="/certification/audit" element={<CertificationAudit />} />
             <Route path="/education" element={<Education />} />
+            <Route path="/education/basics" element={<EducationBasics />} />
+            <Route path="/education/masterclass" element={<EducationMasterclass />} />
+            <Route path="/education/peer-review" element={<EducationPeerReview />} />
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/consultation/analysis" element={<ConsultationAnalysis />} />
             <Route path="/consultation/process" element={<ConsultationProcess />} />

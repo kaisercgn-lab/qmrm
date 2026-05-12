@@ -212,14 +212,17 @@ export const content = {
         {
           title: 'Grundlagenmodul',
           text: 'Vermittlung der Basiskenntnisse zu Indikationen, Untersuchungstechnik und standardisierter Befundung.',
+          link: '/education/basics',
         },
         {
-          title: 'Praxisworkshops',
+          title: 'Masterclass',
           text: 'Vertiefung des Wissens anhand komplexer Fallbeispiele und spezieller diagnostischer Fragestellungen.',
+          link: '/education/masterclass',
         },
         {
           title: 'Peer-Review Sessions',
           text: 'Praxistraining zur optimalen Patientenlagerung, Protokollauswahl und Vermeidung von Artefakten.',
+          link: '/education/peer-review',
         },
       ],
     },
@@ -737,20 +740,23 @@ export const content = {
         eyebrow: 'Education',
         title: 'Training for a new level of quality.',
         subtitle:
-          'Evidenzbasierte und praxisnahe Fortbildungen für eine sichere und effiziente Diagnostik.',
+          'Evidence-based and practical training for safe and efficient diagnostics.',
       },
       tracks: [
         {
           title: 'Foundations module',
-          text: 'Vermittlung der Basiskenntnisse zu Indikationen, Untersuchungstechnik und standardisierter Befundung.',
+          text: 'Conveying basic knowledge on indications, examination techniques, and standardized reporting.',
+          link: '/education/basics',
         },
         {
-          title: 'Hands-on workshops',
-          text: 'Vertiefung des Wissens anhand komplexer Fallbeispiele und spezieller diagnostischer Fragestellungen.',
+          title: 'Masterclass',
+          text: 'Deepening knowledge through complex case studies and specific diagnostic questions.',
+          link: '/education/masterclass',
         },
         {
-          title: 'Peer review sessions',
-          text: 'Praxistraining zur optimalen Patientenlagerung, Protokollauswahl und Vermeidung von Artefakten.',
+          title: 'Peer-review sessions',
+          text: 'Practical training for optimal patient positioning, protocol selection, and artifact avoidance.',
+          link: '/education/peer-review',
         },
       ],
     },
