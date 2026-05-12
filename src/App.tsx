@@ -23,6 +23,12 @@ const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ defa
 const ConsultationAnalysis = lazy(() => import('./pages/ConsultationAnalysis').then(m => ({ default: m.ConsultationAnalysis })))
 const ConsultationProcess = lazy(() => import('./pages/ConsultationProcess').then(m => ({ default: m.ConsultationProcess })))
 const ConsultationQuality = lazy(() => import('./pages/ConsultationQuality').then(m => ({ default: m.ConsultationQuality })))
+const HighlightSoftware = lazy(() => import('./pages/HighlightSoftware').then(m => ({ default: m.HighlightSoftware })))
+const HighlightPortal = lazy(() => import('./pages/HighlightPortal').then(m => ({ default: m.HighlightPortal })))
+const HighlightCertification = lazy(() => import('./pages/HighlightCertification').then(m => ({ default: m.HighlightCertification })))
+const HighlightEducation = lazy(() => import('./pages/HighlightEducation').then(m => ({ default: m.HighlightEducation })))
+const HighlightProtocols = lazy(() => import('./pages/HighlightProtocols').then(m => ({ default: m.HighlightProtocols })))
+const HighlightConsulting = lazy(() => import('./pages/HighlightConsulting').then(m => ({ default: m.HighlightConsulting })))
 const News = lazy(() => import('./pages/News').then(m => ({ default: m.News })))
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })))
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })))
@@ -80,6 +86,12 @@ const AppShell = () => {
             <Route path="/consultation/analysis" element={<ConsultationAnalysis />} />
             <Route path="/consultation/process" element={<ConsultationProcess />} />
             <Route path="/consultation/quality" element={<ConsultationQuality />} />
+            <Route path="/highlights/software" element={<HighlightSoftware />} />
+            <Route path="/highlights/portal" element={<HighlightPortal />} />
+            <Route path="/highlights/certification" element={<HighlightCertification />} />
+            <Route path="/highlights/education" element={<HighlightEducation />} />
+            <Route path="/highlights/protocols" element={<HighlightProtocols />} />
+            <Route path="/highlights/consulting" element={<HighlightConsulting />} />
             <Route path="/news" element={<News />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

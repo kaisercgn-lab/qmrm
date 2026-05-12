@@ -10,7 +10,7 @@ export const BrandHero = () => {
   return (
     <section className="brand-hero">
       <div className="brand-hero-content">
-        <img className="brand-logo" src={logoUrl} alt="QMRM GmbH" />
+        <img style={{ width: '100%', maxWidth: '300px', borderRadius: 'var(--radius)', marginBottom: '1.5rem', boxShadow: 'var(--shadow)', objectFit: 'cover' }} src="/hero-mri.png" alt="Mamma-MRT Scan" />
         <span className="brand-eyebrow">{t.home.hero.eyebrow}</span>
         <h1>{t.home.hero.title}</h1>
         <p className="brand-lead">{t.home.hero.subtitle}</p>
