@@ -67,10 +67,26 @@ export const fr = {
       title: 'Comment nous collaborons',
       subtitle: 'Un flux de travail clair, de l\'évaluation initiale à l\'assurance qualité continue.',
       steps: [
-        'Lancement et état des lieux : technologie, personnel, processus.',
-        'Formation MR-Max pour les médecins et les techniciens.',
-        'Certification et audits basés sur le standard QMRM.',
-        'Assurance qualité continue et deuxièmes avis.',
+        {
+          title: 'Lancement et état des lieux',
+          text: 'technologie, personnel, processus.',
+          link: '/pathway/kickoff'
+        },
+        {
+          title: 'Formation MR-Max pour les',
+          text: 'médecins et les techniciens.',
+          link: '/pathway/training'
+        },
+        {
+          title: 'Certification et audits basés',
+          text: 'sur le standard QMRM.',
+          link: '/pathway/certification'
+        },
+        {
+          title: 'Assurance qualité continue',
+          text: 'et deuxièmes avis.',
+          link: '/pathway/quality'
+        },
       ],
     },
     quote: {

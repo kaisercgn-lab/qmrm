@@ -98,32 +98,32 @@ export const content = {
           {
             title: 'MR-Max Ausbildungssoftware',
             text: 'Interaktive Fallbibliothek, strukturierte Prüfungen und Protokollwissen für eine sichere Befundung.',
-            link: '/highlights/software',
+            link: '/mr-max',
           },
           {
             title: 'Zweitmeinungsportal',
             text: 'Standardisierte Zweitbefundung durch erfahrene Expert:innen mit nachvollziehbaren Empfehlungen.',
-            link: '/highlights/portal',
+            link: '/consultation',
           },
           {
             title: 'Zertifizierung',
             text: 'Auditierung von Zentren, definierte Qualitätskriterien und kontinuierliches Monitoring.',
-            link: '/highlights/certification',
+            link: '/certification',
           },
           {
             title: 'Kurse & Workshops',
             text: 'Fortbildungen für Radiolog:innen und MTR – praxisnah, modular und evidenzbasiert.',
-            link: '/highlights/education',
+            link: '/education',
           },
           {
             title: 'Protokolle & Technik',
             text: 'Optimierte MR-Protokolle, DWI und Kontrastmittelstrategien für hohe Bildqualität.',
-            link: '/highlights/protocols',
+            link: '/mr-max',
           },
           {
             title: 'Beratung & Implementierung',
             text: 'Begleitung beim Aufbau oder der Optimierung eines Mamma-MRT-Angebots.',
-            link: '/highlights/consulting',
+            link: '/consultation',
           },
         ],
       },
@@ -132,10 +132,26 @@ export const content = {
         subtitle:
           'Ein klarer Ablauf von der Bestandsaufnahme bis zur laufenden Qualitätssicherung.',
         steps: [
-          'Kick-off & Bestandsaufnahme: Technik, Personal, Prozesse.',
-          'Schulung & MR-Max Training für Ärzt:innen und MTR.',
-          'Zertifizierung und Audits nach QMRM-Standard.',
-          'Kontinuierliche Qualitätssicherung & Zweitmeinungen.',
+          {
+            title: 'Kick-off & Bestandsaufnahme',
+            text: 'Analyse von Technik, Personal und Prozessen.',
+            link: '/pathway/kickoff'
+          },
+          {
+            title: 'Schulung & MR-Max Training',
+            text: 'Gezielte Weiterbildung für Ärzt:innen und MTR.',
+            link: '/pathway/training'
+          },
+          {
+            title: 'Zertifizierung und Audits',
+            text: 'Qualitätsnachweis nach dem etablierten QMRM-Standard.',
+            link: '/pathway/certification'
+          },
+          {
+            title: 'Qualitätssicherung & Zweitmeinungen',
+            text: 'Kontinuierliche Begleitung im klinischen Alltag.',
+            link: '/pathway/quality'
+          }
         ],
       },
       quote: {
@@ -632,32 +648,32 @@ export const content = {
           {
             title: 'MR-Max training software',
             text: 'Interactive case library, structured assessments, and protocol knowledge for confident reporting.',
-            link: '/highlights/software',
+            link: '/mr-max',
           },
           {
             title: 'Second-opinion portal',
             text: 'Structured second reads by experienced experts with clear recommendations.',
-            link: '/highlights/portal',
+            link: '/consultation',
           },
           {
             title: 'Certification',
             text: 'Center audits, defined quality criteria, and continuous monitoring.',
-            link: '/highlights/certification',
+            link: '/certification',
           },
           {
             title: 'Courses & workshops',
             text: 'Practical training for radiologists and technologists — modular and evidence-based.',
-            link: '/highlights/education',
+            link: '/education',
           },
           {
             title: 'Protocols & technology',
             text: 'Optimized MRI protocols, DWI and contrast strategies for high image quality.',
-            link: '/highlights/protocols',
+            link: '/mr-max',
           },
           {
             title: 'Consulting & implementation',
             text: 'Guidance to set up or optimize a breast MRI service.',
-            link: '/highlights/consulting',
+            link: '/consultation',
           },
         ],
       },
@@ -666,10 +682,26 @@ export const content = {
         subtitle:
           'A clear workflow from assessment to continuous quality assurance.',
         steps: [
-          'Kick-off & baseline review: technology, staff, processes.',
-          'Training & MR-Max education for radiologists and technologists.',
-          'Certification and audits based on the QMRM standard.',
-          'Ongoing quality assurance & second opinions.',
+          {
+            title: 'Kick-off & baseline review',
+            text: 'Analysis of technology, staff, and processes.',
+            link: '/pathway/kickoff'
+          },
+          {
+            title: 'Training & MR-Max education',
+            text: 'Targeted education for radiologists and technologists.',
+            link: '/pathway/training'
+          },
+          {
+            title: 'Certification and audits',
+            text: 'Quality proof based on the established QMRM standard.',
+            link: '/pathway/certification'
+          },
+          {
+            title: 'Quality assurance & second opinions',
+            text: 'Continuous support in daily clinical routine.',
+            link: '/pathway/quality'
+          }
         ],
       },
       quote: {

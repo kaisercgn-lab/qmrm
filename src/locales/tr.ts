@@ -67,10 +67,26 @@ export const tr = {
       title: 'Nasıl Birlikte Çalışırız',
       subtitle: 'Değerlendirmeden sürekli kalite güvencesine kadar net bir iş akışı.',
       steps: [
-        'Başlangıç ve temel durum değerlendirmesi: teknoloji, personel, süreçler.',
-        'Radyologlar ve teknisyenler için MR-Max eğitimi.',
-        'QMRM standardına dayalı sertifikasyon ve denetimler.',
-        'Sürekli kalite güvencesi ve ikinci görüşler.',
+        {
+          title: 'Başlangıç ve temel durum değerlendirmesi',
+          text: 'teknoloji, personel, süreçler.',
+          link: '/pathway/kickoff'
+        },
+        {
+          title: 'Radyologlar ve teknisyenler',
+          text: 'için MR-Max eğitimi.',
+          link: '/pathway/training'
+        },
+        {
+          title: 'QMRM standardına dayalı',
+          text: 'sertifikasyon ve denetimler.',
+          link: '/pathway/certification'
+        },
+        {
+          title: 'Sürekli kalite güvencesi',
+          text: 've ikinci görüşler.',
+          link: '/pathway/quality'
+        },
       ],
     },
     quote: {

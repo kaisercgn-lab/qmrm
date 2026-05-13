@@ -67,10 +67,26 @@ export const es = {
       title: 'Cómo Trabajamos Juntos',
       subtitle: 'Un flujo de trabajo claro, desde la evaluación inicial hasta el control de calidad continuo.',
       steps: [
-        'Inicio y evaluación de base: tecnología, personal, procesos.',
-        'Formación MR-Max para médicos y técnicos.',
-        'Certificación y auditorías basadas en el estándar QMRM.',
-        'Control de calidad continuo y segundas opiniones.',
+        {
+          title: 'Inicio y evaluación de base',
+          text: 'tecnología, personal, procesos.',
+          link: '/pathway/kickoff'
+        },
+        {
+          title: 'Formación MR-Max para',
+          text: 'médicos y técnicos.',
+          link: '/pathway/training'
+        },
+        {
+          title: 'Certificación y auditorías basadas',
+          text: 'en el estándar QMRM.',
+          link: '/pathway/certification'
+        },
+        {
+          title: 'Control de calidad',
+          text: 'continuo y segundas opiniones.',
+          link: '/pathway/quality'
+        },
       ],
     },
     quote: {

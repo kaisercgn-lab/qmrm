@@ -18,11 +18,7 @@ export const Home = () => {
       </Section>
 
       <Section title={t.home.pathways.title} subtitle={t.home.pathways.subtitle}>
-        <ol className="steps">
-          {t.home.pathways.steps.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
+        <CardGrid items={t.home.pathways.steps} />
       </Section>
 
       <Section title={t.home.news.title} subtitle={t.home.news.subtitle}>

@@ -23,6 +23,10 @@ const Consultation = lazy(() => import('./pages/Consultation').then(m => ({ defa
 const ConsultationAnalysis = lazy(() => import('./pages/ConsultationAnalysis').then(m => ({ default: m.ConsultationAnalysis })))
 const ConsultationProcess = lazy(() => import('./pages/ConsultationProcess').then(m => ({ default: m.ConsultationProcess })))
 const ConsultationQuality = lazy(() => import('./pages/ConsultationQuality').then(m => ({ default: m.ConsultationQuality })))
+const PathwayKickoff = lazy(() => import('./pages/PathwayKickoff').then(m => ({ default: m.PathwayKickoff })))
+const PathwayTraining = lazy(() => import('./pages/PathwayTraining').then(m => ({ default: m.PathwayTraining })))
+const PathwayCertification = lazy(() => import('./pages/PathwayCertification').then(m => ({ default: m.PathwayCertification })))
+const PathwayQuality = lazy(() => import('./pages/PathwayQuality').then(m => ({ default: m.PathwayQuality })))
 const HighlightSoftware = lazy(() => import('./pages/HighlightSoftware').then(m => ({ default: m.HighlightSoftware })))
 const HighlightPortal = lazy(() => import('./pages/HighlightPortal').then(m => ({ default: m.HighlightPortal })))
 const HighlightCertification = lazy(() => import('./pages/HighlightCertification').then(m => ({ default: m.HighlightCertification })))
@@ -86,6 +90,10 @@ const AppShell = () => {
             <Route path="/consultation/analysis" element={<ConsultationAnalysis />} />
             <Route path="/consultation/process" element={<ConsultationProcess />} />
             <Route path="/consultation/quality" element={<ConsultationQuality />} />
+            <Route path="/pathway/kickoff" element={<PathwayKickoff />} />
+            <Route path="/pathway/training" element={<PathwayTraining />} />
+            <Route path="/pathway/certification" element={<PathwayCertification />} />
+            <Route path="/pathway/quality" element={<PathwayQuality />} />
             <Route path="/highlights/software" element={<HighlightSoftware />} />
             <Route path="/highlights/portal" element={<HighlightPortal />} />
             <Route path="/highlights/certification" element={<HighlightCertification />} />
